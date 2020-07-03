@@ -1,0 +1,40 @@
+6/27/2020
+Started Restaurant App 2.0 using Node and Express
+
+6/30/2020
+Traversy API tutorial for the last two nights
+
+Realized I needed to take this out the table.js file
+// router.use('/selectAppetizerMenu', (req, res, next) => {
+//   res.send('<h1>...loading Appetizer menu</h1>')
+// });
+
+// router.use('/selectDessertMenu', (req, res, next) => {
+//   res.send('<h1>...loading Dessert menu App</h1>')
+// });
+
+// router.use('/addSeat', (req, res, next) => {
+//   res.send('<h1>seat added!</h1>')
+// });
+
+// router.use('/selectSeat', (req, res, next) => {
+//   res.send('<h1>seat selected!</h1>')
+// });
+
+// router.use('/selectProduct', (req, res, next) => {
+//   res.send('<h1>product selected!</h1>')
+// });
+
+
+// router.get('/calculateTotal', (req, res, next) => {
+//   res.send('<h1>Total: </h1>')
+// });
+
+These names are not RESTful
+
+
+*************************************************************
+Go back to Section 3, Lesson 13. Make sure you are up to date
+
+-------------------------------------------------------------------------
+
