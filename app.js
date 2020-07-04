@@ -3,8 +3,11 @@ const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
 const path = require('path');
 const morgan = require('morgan');
+const connectDB = require('./config/db');
 
 dotenv.config({path: './config/config.env'});
+connectDB();
+
 const app = express();
 
 if(process.env.NODE_ENV === 'development') {
