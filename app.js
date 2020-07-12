@@ -10,6 +10,9 @@ connectDB();
 
 const app = express();
 
+//Body parser
+app.use(express.json());
+
 if(process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
@@ -17,13 +20,20 @@ if(process.env.NODE_ENV === 'development') {
 const PORT = process.env.PORT || 3000;
 
 //Route files
-const menuItemRoutes = require('./routes/menuItems');
+const burgerRoutes = require('./routes/burgers');
+const friesRoutes = require('./routes/fries');
+const milkshakesRoutes = require('./routes/milkshakes');
+const productDisplaysRoutes = require('./routes/productDisplays');
 const mainRoutes = require('./routes/main');
 
 app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/api/v1/menuItems', menuItemRoutes);
+app.use('/api/v1/burgers', burgerRoutes);
+app.use('/api/v1/fries', friesRoutes);
+app.use('/api/v1/milkshakes', milkshakesRoutes);
+app.use('/api/v1/productDisplays', productDisplaysRoutes);
 app.use('/', mainRoutes);
 
 app.use((req, res, next) => {
